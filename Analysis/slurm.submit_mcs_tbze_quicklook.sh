@@ -1,16 +1,16 @@
 #!/bin/bash
 #SBATCH -J mcs_tbze_quicklook
 #SBATCH -A m1867
-#SBATCH -t 00:30:00
+#SBATCH -t 00:20:00
 #SBATCH -q regular
 #SBATCH -N 1
-#SBATCH -n 64
-#SBATCH -C haswell
+#SBATCH -n 128
+#SBATCH -C cpu
 #SBATCH --exclusive
 #SBATCH --output=log_mcs_tbze_quicklook_%A_%a.log
 #SBATCH --mail-type=END
 #SBATCH --mail-user=zhe.feng@pnnl.gov
-#SBATCH --array=1-18
+#SBATCH --array=1-13
 
 date
 source activate flextrkr
